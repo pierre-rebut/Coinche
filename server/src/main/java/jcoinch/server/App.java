@@ -58,7 +58,6 @@ public final class App
 	       	.childOption(ChannelOption.SO_KEEPALIVE, true);
 	        ChannelFuture f = b.bind(port).sync();
 	        boolean tmp = true;
-	        System.out.println("Ip address : " + InetAddress.getLocalHost().getHostAddress());
 	        System.out.println("Port : " + port);
 	        Scanner nc = new Scanner(System.in);
 	        while (tmp)
@@ -90,6 +89,7 @@ public final class App
     	}
     	catch (Exception e)
     	{
+	    e.printStackTrace();
     		System.out.println("An error occured");
     	}
     }
